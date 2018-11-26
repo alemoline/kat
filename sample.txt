@@ -1,0 +1,7 @@
+This text file
+will be used
+as an example
+to test
+the kat.py program.
+
+Well... does it work or not?
