@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding: utf-8
-# Programa que emula el comando "cat" de Unix. Escrito en Python 2.7
+# Program that emulates Unix's "cat" command. Written in Python 2.7
 # (C) Nov 2018, Ale Moliné
 
 import sys
@@ -13,5 +13,14 @@ if len(sys.argv) < 2:
     print "kat: please specify a file name." # exits if no command-line arguments are given
     quit()
 
+filecli = sys.argv[1] # file specified at the command-line.
 print "So far, so good.",
-print "File name specified is:", sys.argv[1]
+print "File name specified is:", filecli
+
+### Start file access
+
+archivo = open(filecli,"r") # opens the file in read mode as archivo.
+
+for linea in archivo:
+    print linea, # the comma is so that newline character does not add a blank line
+
